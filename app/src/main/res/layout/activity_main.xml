@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+
+    <Button
+        android:id="@+id/btnIngresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Ingreso"
+        android:onClick="abrirFormularioIngresos" />
+
+    <Button
+        android:id="@+id/btnEgresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Egreso"
+        android:onClick="abrirFormularioEgresos" />
+
+    <Button
+        android:id="@+id/btnReporteIngresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reporte de Ingresos"
+        android:onClick="generarReporteIngresos" />
+
+    <Button
+        android:id="@+id/btnReporteEgresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reporte de Egresos"
+        android:onClick="generarReporteEgresos" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+</LinearLayout>
