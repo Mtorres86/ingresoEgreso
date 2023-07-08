@@ -1,4 +1,4 @@
-package hn.uth.ingresosegresos;
+package hn.uth.ingresosegresos.Models;
 
 public class Egreso {
     private long id;

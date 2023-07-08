@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import hn.uth.ingresosegresos.Models.Egreso;
+import hn.uth.ingresosegresos.Models.Ingreso;
+
 public class IngresoEgresoAdapter extends RecyclerView.Adapter<IngresoEgresoAdapter.ViewHolder> {
     private List<Ingreso> ingresos;
     private List<Egreso> egresos;

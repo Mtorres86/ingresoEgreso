@@ -1,4 +1,4 @@
-package hn.uth.ingresosegresos;
+package hn.uth.ingresosegresos.Models;
 
 public class Ingreso {
     private long id;
@@ -17,16 +17,31 @@ public class Ingreso {
         return id;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public double getMonto() {
         return monto;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
     }
 
     public String getDescripcion() {
         return descripcion;
     }
 
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
     public String getFecha() {
         return fecha;
     }
-}
 
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+}

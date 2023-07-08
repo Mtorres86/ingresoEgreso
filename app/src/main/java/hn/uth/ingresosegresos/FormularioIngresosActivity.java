@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import hn.uth.ingresosegresos.DataBase.DAO.IngresoDAO;
+import hn.uth.ingresosegresos.DataBase.DatabaseHelper;
+import hn.uth.ingresosegresos.Models.Ingreso;
+
 public class FormularioIngresosActivity extends AppCompatActivity {
 
     private EditText etMonto;
@@ -27,6 +31,10 @@ public class FormularioIngresosActivity extends AppCompatActivity {
         String monto = etMonto.getText().toString();
         String descripcion = etDescripcion.getText().toString();
         String fecha = etFecha.getText().toString();
+
+
+        IngresoDAO ingresoDAO= new IngresoDAO(getApplicationContext());
+        ingresoDAO.insertIngreso(new Ingreso(0, Double.parseDouble(monto), descripcion, fecha));
 
         // Aquí puedes agregar la lógica para guardar el ingreso en el DAO
         // por ejemplo, puedes crear un objeto Ingreso con los datos ingresados
