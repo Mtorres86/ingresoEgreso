@@ -1,6 +1,6 @@
 package hn.uth.ingresosegresos.Models;
 
-public class Egreso {
+public class IngresoEgreso {
     private long id;
     private double monto;
     private String descripcion;
@@ -8,7 +8,7 @@ public class Egreso {
 
     private String tipo;
 
-    public Egreso(long id, double monto, String descripcion, String fecha, String tipo) {
+    public IngresoEgreso(long id, double monto, String descripcion, String fecha, String tipo) {
         this.id = id;
         this.monto = monto;
         this.descripcion = descripcion;
@@ -20,19 +20,36 @@ public class Egreso {
         return id;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public double getMonto() {
         return monto;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
     }
 
     public String getDescripcion() {
         return descripcion;
     }
 
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
     public String getFecha() {
         return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     public String getTipo() {
         return tipo;
     }
+
 }

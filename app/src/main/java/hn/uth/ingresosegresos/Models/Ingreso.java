@@ -6,11 +6,14 @@ public class Ingreso {
     private String descripcion;
     private String fecha;
 
-    public Ingreso(long id, double monto, String descripcion, String fecha) {
+    private String tipo;
+
+    public Ingreso(long id, double monto, String descripcion, String fecha, String tipo) {
         this.id = id;
         this.monto = monto;
         this.descripcion = descripcion;
         this.fecha = fecha;
+        this.tipo = tipo;
     }
 
     public long getId() {
@@ -44,4 +47,9 @@ public class Ingreso {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
 }

@@ -36,9 +36,9 @@ public class FormularioEgresosActivity extends AppCompatActivity {
 
         // Obtener los ingresos y egresos de la base de datos
         EgresoDAO egresoDAO= new EgresoDAO(getApplicationContext());
-        egresoDAO.insertEgreso(new Egreso(0, Double.parseDouble(monto), descripcion, fecha));
+        egresoDAO.insertEgreso(new Egreso(0, Double.parseDouble(monto), descripcion, fecha, "E"));
 
-        // Aquí puedes agregar la lógica para guardar el egreso en el DAO
+
 
         Toast.makeText(this, "Egreso guardado correctamente", Toast.LENGTH_SHORT).show();
         finish();

@@ -34,6 +34,12 @@ public class EgresoDAO {
 
         return id;
     }
+    public void eliminarEgreso(long id) {
+        String whereClause = "id = ?";
+        String[] whereArgs = {String.valueOf(id)};
+        database.delete("egresos", whereClause, whereArgs);
+    }
+
 
     public List<Egreso> getAllEgresos() {
         List<Egreso> egresos = new ArrayList<>();
@@ -47,7 +53,7 @@ public class EgresoDAO {
                 String descripcion = cursor.getString(cursor.getColumnIndex("descripcion"));
                 String fecha = cursor.getString(cursor.getColumnIndex("fecha"));
 
-                egresos.add(new Egreso(id, monto, descripcion, fecha));
+                egresos.add(new Egreso(id, monto, descripcion, fecha, "E"));
             } while (cursor.moveToNext());
         }
 

@@ -34,11 +34,9 @@ public class FormularioIngresosActivity extends AppCompatActivity {
 
 
         IngresoDAO ingresoDAO= new IngresoDAO(getApplicationContext());
-        ingresoDAO.insertIngreso(new Ingreso(0, Double.parseDouble(monto), descripcion, fecha));
+        ingresoDAO.insertIngreso(new Ingreso(0, Double.parseDouble(monto), descripcion, fecha, "I"));
 
-        // Aquí puedes agregar la lógica para guardar el ingreso en el DAO
-        // por ejemplo, puedes crear un objeto Ingreso con los datos ingresados
-        // y llamar a un método del DAO para guardarlo en la base de datos.
+
 
         Toast.makeText(this, "Ingreso guardado correctamente", Toast.LENGTH_SHORT).show();
         finish();

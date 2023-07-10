@@ -34,6 +34,14 @@ public class IngresoDAO {
     }
 
 
+    public void eliminarIngreso(long id) {
+        String whereClause = "id = ?";
+        String[] whereArgs = {String.valueOf(id)};
+        database.delete("ingresos", whereClause, whereArgs);
+    }
+
+
+
     public List<Ingreso> getAllIngresos() {
         List<Ingreso> ingresos = new ArrayList<>();
 
@@ -46,7 +54,7 @@ public class IngresoDAO {
                 String descripcion = cursor.getString(cursor.getColumnIndex("descripcion"));
                 String fecha = cursor.getString(cursor.getColumnIndex("fecha"));
 
-                Ingreso ingreso = new Ingreso(id, monto, descripcion, fecha);
+                Ingreso ingreso = new Ingreso(id, monto, descripcion, fecha, "I");
                 ingresos.add(ingreso);
             } while (cursor.moveToNext());
         }

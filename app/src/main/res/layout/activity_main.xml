@@ -3,34 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="50px">
 
 
 
     <Button
         android:id="@+id/btnIngresos"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrar Ingreso"
         android:onClick="abrirFormularioIngresos" />
 
     <Button
         android:id="@+id/btnEgresos"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrar Egreso"
         android:onClick="abrirFormularioEgresos" />
 
     <Button
         android:id="@+id/btnReporteIngresos"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Reporte de Ingresos"
         android:onClick="generarReporteIngresos" />
 
     <Button
         android:id="@+id/btnReporteEgresos"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Reporte de Egresos"
         android:onClick="generarReporteEgresos" />

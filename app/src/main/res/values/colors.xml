@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorIngreso">#00FF00</color> <!-- Color verde para ingresos -->
+    <color name="colorEgreso">#FF0000</color> <!-- Color rojo para egresos -->
 </resources>
